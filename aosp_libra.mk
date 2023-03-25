@@ -22,14 +22,17 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/libra/libra-vendor.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/libra/device.mk)
+
+# Gapps Architecture
+TARGET_GAPPS_ARCH := arm64
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := libra
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Mi-4c
-PRODUCT_NAME := lineage_libra
+PRODUCT_NAME := aosp_libra
